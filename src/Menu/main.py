@@ -11,16 +11,18 @@ bot_t = Theme('│', '│', '─', '─', ('├', '┤', '└', '┘'))
 s = Screen()
 
 t = Text("hello", "red")
+t1 = Text("Sup", "blue")
 
 top_t.set_bottom(False)
 
 F = function.Function(t, '')
+F1 = function.Function(t1, '')
 
 h = header.Header(t, top_t, 10, 10)
 
 print(h.content, end='')
 
-b = body.Body([F], mid_t, 10, 10)
+b = body.Body([F, F1], mid_t, 10, 10)
 
 print(b.content, end='')
 
