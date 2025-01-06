@@ -29,3 +29,10 @@ class Screen(object):
         self.width =  size.columns
         self.length = size.lines
 
+    def get_width(self):
+        return self.width
+
+    def get_height(self):
+        return self.length
+
+
