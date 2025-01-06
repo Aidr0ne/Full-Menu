@@ -18,5 +18,5 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/Aidr0ne/Menu"
-Issues = "https://github.com/Aidr0ne/Menu/issues"
+Homepage = "https://github.com/Aidr0ne/Full-Menu"
+Issues = "https://github.com/Aidr0ne/Full-Menu/issues"
