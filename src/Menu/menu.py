@@ -1,6 +1,34 @@
-from .screen import Screen
-from .Parts import body, footer, header
+from screen import Screen
+from Parts import body, footer, header
 
 class Menu(object):
-    def __init__(self, screen=Screen, head=header, body=body, footer=footer):
-        pass
+    def __init__(self, head, body, footer, screen=None):
+        if screen == None:
+            self.screen = Screen()
+        else: self.screen = screen
+
+        self.head = head
+        self.body = body
+        self.footer = footer
+
+
+    def show(self):
+        h = self.head.show()
+        b = self.body.show()
+        f = self.footer.show()
+
+        c = h + b + f
+        lines = c.splitlines()
+        num = len(lines)
+
+        empty_space = self.screen.get_height() - num
+
+        self.footer.empty_space(empty_space)
+
+        f = self.footer.show()
+
+        print(empty_space)
+
+        print(h, end='')
+        print(b, end='')
+        print(f)

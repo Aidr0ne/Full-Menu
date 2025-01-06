@@ -3,6 +3,7 @@ from text import Text
 from Parts import footer, header, body
 from theme import Theme
 from items import function
+from menu import Menu
 
 top_t = Theme('│', '│', '─', '─', ('┌', '┐', '├', '┤'))
 mid_t = Theme('│', '│', '─', '─', ('├', '┤', '├', '┤'))
@@ -18,14 +19,13 @@ top_t.set_bottom(False)
 F = function.Function(t, '')
 F1 = function.Function(t1, '')
 
-h = header.Header(t, top_t, 10, 10)
+h = header.Header(t, top_t, s.get_width(), 10)
 
-print(h.content, end='')
+b = body.Body([F], mid_t, s.get_width(), 20)
 
+f = footer.Footer(t, bot_t, s.get_width(), 10)
 b = body.Body([F, F1], mid_t, 10, 10)
 
-print(b.content, end='')
+m = Menu(h, b, f, s)
 
-f = footer.Footer(t, bot_t, 10, 10)
-
-print(f.content)
+m.show()
