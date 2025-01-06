@@ -1,5 +1,5 @@
-from screen import Screen
-from Parts import body, footer, header
+from Full_Menu.screen import Screen
+from Full_Menu.Parts import body, footer, header
 
 class Menu(object):
     def __init__(self, head, body, footer, screen=None):

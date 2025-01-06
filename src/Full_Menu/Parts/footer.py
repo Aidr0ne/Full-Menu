@@ -1,5 +1,5 @@
-from text import Text
-from theme import Theme
+from Full_Menu.text import Text
+from Full_Menu.theme import Theme
 
 class Footer(object):
     def __init__(self, text: Text, theme: Theme, width, height):

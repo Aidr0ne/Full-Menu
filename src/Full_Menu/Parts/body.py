@@ -1,5 +1,4 @@
-from text import Text
-from theme import Theme
+from Full_Menu.theme import Theme
 
 class Body(object):
     def __init__(self, objects, theme: Theme, width, height):

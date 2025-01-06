@@ -8,7 +8,7 @@ version = "0.0.1"
 authors = [
   { name="Aiden Robinson", email="aidrobin2@gmail.com" },
 ]
-description = "A version of console-menu That will be more activly maintained yet also offer full control over customisation"
+description = "A version of console-menu That will be more activly maintained yet also offer full control over customisation. This is the beggining of the package and what is offered is quite limited for now"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
