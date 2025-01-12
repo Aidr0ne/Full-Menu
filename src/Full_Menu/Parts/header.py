@@ -2,13 +2,29 @@ from Full_Menu.text import Text
 from Full_Menu.theme import Theme
 
 class Header(object):
-    def __init__(self, text: Text, theme: Theme, width, height):
+    """
+    Header object to hold text and theme objects
+    Args:
+    text: Text object
+    theme: Theme object
+    width: Amount of columns
+    height: Amount of rows
+    """
+    def __init__(self, 
+                 text: Text, 
+                 theme: Theme, 
+                 width: int, 
+                 height: int):
+        
         self.text = text
         self.theme = theme
 
         self.content = self.preload(width, height)
 
-    def preload(self, width, height):
+    def preload(self, width, height) -> str:
+        """
+        Generates content before it's rendered
+        """
         if height < 5:
             print("ERROR: HEIGHT TOO SMALL")
             raise Exception
@@ -22,5 +38,8 @@ class Header(object):
 
         return content
     
-    def show(self):
+    def show(self) -> str:
+        """
+        Renders the content
+        """
         return self.content

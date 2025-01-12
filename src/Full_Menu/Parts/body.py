@@ -1,13 +1,28 @@
 from Full_Menu.theme import Theme
+from Full_Menu.items.function import Function
 
 class Body(object):
-    def __init__(self, objects, theme: Theme, width, height):
+    """
+    Container to hold The objects and theme
+
+    Args:
+    objects: list of objects
+    theme: Theme object
+    width: Amount of columns
+    height: Amount of rows
+    """
+    def __init__(self, 
+                 objects: list[Function], 
+                 theme: Theme,
+                 width: int, 
+                 height: int):
         self.objects = objects
         self.theme = theme
 
         self.content = self.preload(width, height)
 
-    def preload(self, width, height):
+
+    def preload(self, width, height) -> str:
         if height < (5 + len(self.objects)):
             raise ValueError("Height is not big enough")
         
